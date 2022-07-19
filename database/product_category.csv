@@ -1,0 +1,17 @@
+id,category,type
+1,backpack,accessories
+2,bottle,accessories
+3,cap,accessories
+4,men's full pant,male
+5,men's half pant,male
+6,men's hoodie,male
+7,men's jacket,male
+8,men's sports shoes,male
+9,men's tshirt,male
+10,sunglasses,accessories
+11,women's dress,female
+12,women's full pant,female
+13,women's half pant,female
+14,women's jacket,female
+15,women's purse,female
+16,women's tshirt,female

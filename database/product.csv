@@ -1,0 +1,126 @@
+id,name,description,image_url,unit_price,units_in_stock,category_id
+1,Back Pack A,Orange Back Pack,assets/images/ProductImages/backpack/1556.jpg,700,37,1
+2,Back Pack B,Blue Back Pack,assets/images/ProductImages/backpack/1559.jpg,700,17,1
+3,Back Pack C,Green Back Pack,assets/images/ProductImages/backpack/1565.jpg,700,28,1
+4,Back Pack D,Red Back Pack,assets/images/ProductImages/backpack/1623.jpg,700,48,1
+5,Back Pack E,Grey Back Pack,assets/images/ProductImages/backpack/1624.jpg,700,30,1
+6,Back Pack F,Grey Back Pack with Floral Print,assets/images/ProductImages/backpack/1646.jpg,700,15,1
+7,Back Pack G,Green Back Pack with Floral Print,assets/images/ProductImages/backpack/1647.jpg,700,29,1
+8,Back Pack H,Black Back Pack,assets/images/ProductImages/backpack/1791.jpg,700,35,1
+9,Back Pack I,Brown Back Pack,assets/images/ProductImages/backpack/1794.jpg,700,47,1
+10,Back Pack J,Purple Back Pack,assets/images/ProductImages/backpack/1801.jpg,700,42,1
+11,Bottle A,Dark Blue Bottle,assets/images/ProductImages/bottle/1554.jpg,200,24,2
+12,Bottle B,Red Bottle,assets/images/ProductImages/bottle/1555.jpg,200,45,2
+13,Bottle C,Light Blue Bottle,assets/images/ProductImages/bottle/1558.jpg,200,44,2
+14,Bottle D,Pink Bottle,assets/images/ProductImages/bottle/1596.jpg,200,47,2
+15,Bottle E,Purple Bottle,assets/images/ProductImages/bottle/1808.jpg,200,23,2
+16,Bottle F,Yellow Bottle,assets/images/ProductImages/bottle/1915.jpg,200,19,2
+17,Cap A,Black Cap,assets/images/ProductImages/cap/1566.jpg,100,17,3
+18,Cap B,Light Blue Cap,assets/images/ProductImages/cap/16535.jpg,100,46,3
+19,Cap C,Grey Hat,assets/images/ProductImages/cap/16536.jpg,100,17,3
+20,Cap D,Red Hat,assets/images/ProductImages/cap/16537.jpg,100,38,3
+21,Cap F,Blue Checkered Hat,assets/images/ProductImages/cap/1656.jpg,100,18,3
+22,Men's Full Pant A,Black Full Pant with Red Stripes on the side,assets/images/ProductImages/men's full pant/1605.jpg,800,24,4
+23,Men's Full Pant B,Navy Blue Full Pant with Light Blue Stripes on the side,assets/images/ProductImages/men's full pant/1607.jpg,800,21,4
+24,Men's Full Pant C,Grey Sweatpants,assets/images/ProductImages/men's full pant/1883.jpg,800,39,4
+25,Men's Full Pant D,Khaki Sweatpants,assets/images/ProductImages/men's full pant/3920.jpg,800,37,4
+26,Men's Half Pant A,Grey Half Pant with White print,assets/images/ProductImages/men's half pant/1619.jpg,600,17,5
+27,Men's Half Pant B,Navy Blue Half Pant with White print,assets/images/ProductImages/men's half pant/1620.jpg,600,19,5
+28,Men's Half Pant C,Black Half Pant with White print,assets/images/ProductImages/men's half pant/1621.jpg,600,44,5
+29,Men's Half Pant D,Black Shorts,assets/images/ProductImages/men's half pant/1804.jpg,600,40,5
+30,Men's Half Pant E,Grey Shorts,assets/images/ProductImages/men's half pant/1885.jpg,600,40,5
+31,Men's Half Pant F,White Shorts,assets/images/ProductImages/men's half pant/1976.jpg,600,23,5
+32,Men's Half Pant G,Brown Shorts,assets/images/ProductImages/men's half pant/1977.jpg,600,35,5
+33,Hoodie A,Men's Black Hoodie,assets/images/ProductImages/men's hoodie/1895.jpg,1200,50,6
+34,Men's Jacket A,Men's Black Jacket for Sports,assets/images/ProductImages/men's jacket/1528.jpg,1100,30,7
+35,Men's Jacket B,Men's Red Jacket for Sports,assets/images/ProductImages/men's jacket/1530.jpg,1500,50,7
+36,Men's Jacket C,Men's Navy Blue Jacket for Sports,assets/images/ProductImages/men's jacket/1622.jpg,1400,33,7
+37,Men's Sport Shoes A,White and Green Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1541.jpg,1700,16,8
+38,Men's Sport Shoes B,White and Black Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1543.jpg,1700,21,8
+39,Men's Sport Shoes C,Black and White Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1544.jpg,1700,30,8
+40,Men's Sport Shoes D,Black Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1547.jpg,1700,40,8
+41,Men's Sport Shoes E,Grey Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1548.jpg,1700,33,8
+42,Men's Sport Shoes F,Red Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1592.jpg,1700,41,8
+43,Men's Sport Shoes G,Blue Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1649.jpg,1700,34,8
+44,Men's Sport Shoes H,Khaki Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1653.jpg,1700,27,8
+45,Men's Sport Shoes I,White Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1654.jpg,1700,40,8
+46,Men's Sport Shoes J,White and Grey Sport Shoes for Men,assets/images/ProductImages/men's sports shoes/1787.jpg,1700,21,8
+47,Men's T-Shirt A,Half Sleeves Grey T-Shirt for Men,assets/images/ProductImages/men's tshirt/1532.jpg,500,49,9
+48,Men's T-Shirt B,Half Sleeves Red T-Shirt for Men,assets/images/ProductImages/men's tshirt/1533.jpg,500,21,9
+49,Men's T-Shirt C,Half Sleeves Black Collered T-Shirt for Men,assets/images/ProductImages/men's tshirt/1540.jpg,500,38,9
+50,Men's T-Shirt D,Half Sleeves Red Blue-Grey for Men,assets/images/ProductImages/men's tshirt/1562.jpg,500,38,9
+51,Men's T-Shirt E,Half Sleeves Blue T-Shirt for Men,assets/images/ProductImages/men's tshirt/1563.jpg,500,47,9
+52,Men's T-Shirt F,Sleeve-less Grey T-Shirt for Men,assets/images/ProductImages/men's tshirt/1595.jpg,400,44,9
+53,Men's T-Shirt G,White and Orange Collered T-Shirt for Men,assets/images/ProductImages/men's tshirt/1612.jpg,500,15,9
+54,Men's T-Shirt H,White and Black Collered T-Shirt for Men,assets/images/ProductImages/men's tshirt/1613.jpg,500,37,9
+55,Men's T-Shirt I,Half Sleeves White T-Shirt for Men,assets/images/ProductImages/men's tshirt/1616.jpg,500,20,9
+56,Men's T-Shirt J,Full Sleeves Red T-Shirt for Men,assets/images/ProductImages/men's tshirt/1668.jpg,600,20,9
+57,Men's T-Shirt K,Half Sleeves Green T-Shirt for Men,assets/images/ProductImages/men's tshirt/1678.jpg,500,23,9
+58,Men's T-Shirt L,Sleeve-less Blue T-Shirt for Men,assets/images/ProductImages/men's tshirt/1796.jpg,400,32,9
+59,Men's T-Shirt M,Sleeve-less Black T-Shirt for Men,assets/images/ProductImages/men's tshirt/1798.jpg,400,29,9
+60,Men's T-Shirt N,Half Sleeves Yellow T-Shirt for Men,assets/images/ProductImages/men's tshirt/1853.jpg,500,15,9
+61,Men's T-Shirt O,Half Sleeves Purple T-Shirt for Men,assets/images/ProductImages/men's tshirt/1854.jpg,500,29,9
+62,Sunglasses A,Black Ombre Sunglasses,assets/images/ProductImages/sunglasses/17211.jpg,200,48,10
+63,Sunglasses B,Purple Ombre Sunglasses,assets/images/ProductImages/sunglasses/8639.jpg,200,40,10
+64,Sunglasses C,Yellow Sunglasses,assets/images/ProductImages/sunglasses/8642.jpg,200,34,10
+65,Sunglasses D,Green Sunglasses,assets/images/ProductImages/sunglasses/8646.jpg,200,32,10
+66,Sunglasses E,Sleek Black Sunglasses,assets/images/ProductImages/sunglasses/8660.jpg,200,43,10
+67,Sunglasses F,Blue Sunglasses,assets/images/ProductImages/sunglasses/8675.jpg,200,18,10
+68,Sunglasses G,Light Brown Ombre Sunglasses,assets/images/ProductImages/sunglasses/8681.jpg,200,43,10
+69,Sunglasses H,Dark Brown Sunglasses,assets/images/ProductImages/sunglasses/8695.jpg,200,23,10
+70,Sunglasses I,Dark Brown Ombre Sunglasses,assets/images/ProductImages/sunglasses/8698.jpg,200,23,10
+71,Sunglasses J,Red Ombre Sunglasses,assets/images/ProductImages/sunglasses/8700.jpg,200,44,10
+72,Women's Dress A,Light Blue Dress for women,assets/images/ProductImages/women's dress/4282.jpg,1500,47,11
+73,Women's Dress B,Light Orange Dress for women,assets/images/ProductImages/women's dress/57990.jpg,1500,15,11
+74,Women's Dress C,Black and White Dress for women,assets/images/ProductImages/women's dress/59971.jpg,1500,37,11
+75,Women's Dress D,Black Dress for women,assets/images/ProductImages/women's dress/6862.jpg,1500,41,11
+76,Women's Dress E,Light Green Dress for women,assets/images/ProductImages/women's dress/6872.jpg,1500,27,11
+77,Women's Dress F,White and Blue Dress for women,assets/images/ProductImages/women's dress/6875.jpg,1500,25,11
+78,Women's Dress F,Purple Dress for women,assets/images/ProductImages/women's dress/6885.jpg,1500,30,11
+79,Women's Dress G,Turquoise Dress for women,assets/images/ProductImages/women's dress/7306.jpg,1500,25,11
+80,Women's Dress H,Red Checkered Dress for women,assets/images/ProductImages/women's dress/8484.jpg,1500,26,11
+81,Women's Dress I,Multi color Dress for women,assets/images/ProductImages/women's dress/8486.jpg,1500,28,11
+82,Women's Full Pant A,Black Full Pant for Women,assets/images/ProductImages/women's full pant/2109.jpg,800,50,12
+83,Women's Full Pant B,Purple Full Pant for Women,assets/images/ProductImages/women's full pant/2110.jpg,800,17,12
+84,Women's Full Pant C,Black Full Pant with Red Stripes on the Side for Women,assets/images/ProductImages/women's full pant/2111.jpg,800,16,12
+85,Women's Full Pant D,Black Capri Pant for Women,assets/images/ProductImages/women's full pant/2112.jpg,800,15,12
+86,Women's Full Pant E,Grey Capri Pant for Women,assets/images/ProductImages/women's full pant/2113.jpg,800,48,12
+87,Women's Full Pant F,Black Sweatpant for Women,assets/images/ProductImages/women's full pant/2115.jpg,800,28,12
+88,Women's Full Pant G,Blue Capri Pant for Women,assets/images/ProductImages/women's full pant/4773.jpg,800,24,12
+89,Women's Full Pant H,Pink Full Pant for Women,assets/images/ProductImages/women's full pant/4774.jpg,800,39,12
+90,Women's Half Pant A,Green Checkered Hot Pants for Women,assets/images/ProductImages/women's half pant/1981.jpg,600,26,13
+91,Women's Half Pant B,Purple Checkered Hot Pants for Women,assets/images/ProductImages/women's half pant/1982.jpg,600,25,13
+92,Women's Half Pant C,Grey Half Pants for Women,assets/images/ProductImages/women's half pant/2574.jpg,600,23,13
+93,Women's Half Pant D,White Capri Pants for Women,assets/images/ProductImages/women's half pant/2578.jpg,600,50,13
+94,Women's Half Pant E,Blue Half Pants for Women,assets/images/ProductImages/women's half pant/2579.jpg,600,37,13
+95,Women's Half Pant F,Black Half Pants for Women,assets/images/ProductImages/women's half pant/2580.jpg,600,17,13
+96,Women's Half Pant G ,Pink Hot Pants for Women,assets/images/ProductImages/women's half pant/7491.jpg,600,47,13
+97,Women's Half Pant H,Purple Hot Pants for Women,assets/images/ProductImages/women's half pant/7497.jpg,600,16,13
+98,Women's Half Pant I,Purple Capri Pants for Women,assets/images/ProductImages/women's half pant/7514.jpg,600,40,13
+99,Women's Jacket A,Navy Blue Women's Jacket,assets/images/ProductImages/women's jacket/1610.jpg,1500,16,14
+100,Women's Jacket B,Black Women's Jacket,assets/images/ProductImages/women's jacket/1611.jpg,1500,16,14
+101,Women's Purse A,Black Women's Purse,assets/images/ProductImages/women's purse/2667.jpg,2000,22,15
+102,Women's Purse B,Orange Women's Purse,assets/images/ProductImages/women's purse/2670.jpg,2000,23,15
+103,Women's Purse C,Red Floof Women's Purse,assets/images/ProductImages/women's purse/3395.jpg,2000,41,15
+104,Women's Purse D,Blue Floof Women's Purse,assets/images/ProductImages/women's purse/3396.jpg,2000,36,15
+105,Women's Purse E,Green Floof Women's Purse,assets/images/ProductImages/women's purse/3397.jpg,2000,20,15
+106,Women's Purse F,Black Floof Women's Purse,assets/images/ProductImages/women's purse/3398.jpg,2000,44,15
+107,Women's Purse G,Yellow Floof Women's Purse,assets/images/ProductImages/women's purse/3399.jpg,2000,26,15
+108,Women's Purse H,Red Women's Purse,assets/images/ProductImages/women's purse/3404.jpg,2000,18,15
+109,Women's Purse I,Blue Women's Purse,assets/images/ProductImages/women's purse/3405.jpg,2000,40,15
+110,Women's Purse J,Black and White Women's Purse,assets/images/ProductImages/women's purse/8260.jpg,2000,19,15
+111,Women's T-Shirt A,Half Sleeves White Tshirt for women,assets/images/ProductImages/women's tshirt/1561.jpg,700,20,16
+112,Women's T-Shirt B,Full Sleeves Pink Tshirt for women,assets/images/ProductImages/women's tshirt/1609.jpg,800,19,16
+113,Women's T-Shirt C,Half Sleeves Baby Pink Tshirt for women,assets/images/ProductImages/women's tshirt/1651.jpg,700,46,16
+114,Women's T-Shirt D,Half Sleeves Aqua Blue Tshirt for women,assets/images/ProductImages/women's tshirt/1762.jpg,700,25,16
+115,Women's T-Shirt E,Half Sleeves Black Tshirt for women,assets/images/ProductImages/women's tshirt/1803.jpg,700,46,16
+116,Women's T-Shirt F,Sleeveless Yellow Tshirt for women,assets/images/ProductImages/women's tshirt/1978.jpg,700,31,16
+117,Women's T-Shirt G,Half Sleeves Red Tshirt for women,assets/images/ProductImages/women's tshirt/1985.jpg,700,29,16
+118,Women's T-Shirt H,Sleeveless Red Tshirt for women,assets/images/ProductImages/women's tshirt/1988.jpg,600,31,16
+119,Women's T-Shirt I,Half Sleeves Blue Tshirt for women,assets/images/ProductImages/women's tshirt/1991.jpg,700,24,16
+120,Women's T-Shirt J,Half Sleeves Hot Pink Tshirt for women,assets/images/ProductImages/women's tshirt/2290.jpg,700,41,16
+121,Women's T-Shirt K,Half Sleeves Pink Stripes Tshirt for women,assets/images/ProductImages/women's tshirt/2300.jpg,700,36,16
+122,Women's T-Shirt L,Half Sleeves Light Blue Tshirt for women,assets/images/ProductImages/women's tshirt/2305.jpg,900,48,16
+123,Women's T-Shirt M,Half Sleeves Green Stripes Collered Tshirt for women,assets/images/ProductImages/women's tshirt/2313.jpg,900,26,16
+124,Women's T-Shirt N,Half Sleeves Orange Stripes Collered Tshirt for women,assets/images/ProductImages/women's tshirt/7499.jpg,900,49,16
+125,Women's T-Shirt O,Half Sleeves Purple Stripes Collered Tshirt for women,assets/images/ProductImages/women's tshirt/7500.jpg,900,18,16
