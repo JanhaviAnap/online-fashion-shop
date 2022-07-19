@@ -17,12 +17,14 @@ in mysql run the following command to create database
 create database onlineshop;
 ```
 
-## creating tables and entering data in tables ##
+## Creating tables and entering data in tables ##
 enter into the database directory by:
 ```
 cd database/
 ```
 run the [fill.py](https://github.com/JanhaviAnap/Online-Fashion-Shop/blob/main/database/fill.py) using following command:
+<br>
+make sure to update the user and password values in the [fill.py](https://github.com/JanhaviAnap/Online-Fashion-Shop/blob/main/database/fill.py) in the connector
 ```
 python fill.py
 ```
