@@ -48,7 +48,7 @@ CREATE TABLE `onlineshop`.`cart_item` (
 ```
 ## Create Cart History Table ##
 ```
-CREATE TABLE `onlineshop`.`cart_item` (
+CREATE TABLE `onlineshop`.`cart_history` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_email` VARCHAR(450) NULL,
   `total_quantity` INT NULL,
