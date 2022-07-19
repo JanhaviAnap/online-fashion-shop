@@ -4,7 +4,7 @@ e-commerce website using spring boot and angular
 ## Cloning the project ##
 Clone the repository onto your system by running the following code in a directory of your choice:
 ```
-git clone https://github.com/JanhaviAnap/Online-Fashion-Shop.git
+git clone https://github.com/JanhaviAnap/online-fashion-shop.git
 ```
 now enter into the project folder by:
 ```
