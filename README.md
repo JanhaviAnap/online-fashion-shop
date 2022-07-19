@@ -33,3 +33,8 @@ to see the created tables run following commands
 use onlineshop;
 show tables;
 ```
+
+## Openning Spring Boot Project ##
+1. open spring boot in online-fashion-shop folder, i.e. where we have cloned our project
+2. click import projects
+3. import the online-fashion-shop-backend when asked for browse
