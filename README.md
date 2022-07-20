@@ -8,7 +8,7 @@ git clone https://github.com/JanhaviAnap/online-fashion-shop.git
 ```
 now enter into the project folder by:
 ```
-cd Online-Fashion-Shop/
+cd online-Fashion-Shop/
 ```
 
 ## Creating databse in MySQL ##
