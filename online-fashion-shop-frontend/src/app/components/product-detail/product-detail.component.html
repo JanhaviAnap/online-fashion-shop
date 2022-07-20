@@ -1,0 +1,31 @@
+<!-- <br><br><br><br> -->
+
+<div id="containerD">
+    <div id="imageSection">
+        <img class="img" id="imageSection" src="{{prod.imageUrl}}" alt="Card image cap" >
+    </div>
+    <div id="productDetails">
+        <h1>{{prod.name}}</h1>
+        <h4>Category: {{category.category}}<br>Type: {{category.type}}</h4>
+        <div id="details">
+            <h3>Rs {{prod.unitPrice}}</h3>
+            <h3>Description</h3>
+            <p>{{prod.description}}</p>
+        </div>
+        <div id="button">
+            <p style="margin-bottom: 0px;"><b>In Stock: </b>{{prod.unitsInStock}}</p>
+            <!-- <div class="quantity"> 
+                <h3>Quantity</h3>
+                <button class="minus fa fa-minus"></button>
+                <input type="text" value="1"/>
+                <button class="minus fa fa-plus"></button>
+            </div> -->
+            <button (click)="addToCart()" 
+            style="margin-top:15pX; margin-bottom: 15px;"
+            >Add to cart</button>
+        </div>
+        <div>
+            <a routerLink="/shop/products">Back to Product List</a>
+        </div>
+    </div>
+</div>

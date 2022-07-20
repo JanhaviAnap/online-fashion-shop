@@ -1,0 +1,163 @@
+<br><br><br><br><br> 
+<div class="container" id="body">
+    <div>
+        <br>
+        <h1 class="text-center">Checkout</h1>
+        <br>
+    </div>
+     
+    <div class="row">
+        <div class="col-100">
+          <div class="container">
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+            
+              <div class="row">
+                <div class="col-50" formGroupName="shippingAddress">
+                  <h3>Shipping Address</h3>
+                  <label for="fullName"><i class="fa fa-user"></i> Full Name</label>
+                  <input formControlName="fullName" type="text" id="fname" name="fullName" placeholder="John M. Doe">
+                  <div *ngIf="fullName!.invalid && (fullName!.dirty||fullName!.touched)" class="alert alert-warning mt-1">
+                    <div *ngIf="fullName!.errors?.['required'] || fullName!.errors?.['notOnlyWhiteSpace'] ">
+                      FullName is required. 
+                    </div>
+                    <div *ngIf="fullName!.errors?.['minlength']">
+                      Full Name must be atleast 2 characters long
+                    </div> 
+                  </div>
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input formControlName="email" type="text" id="email" name="email" placeholder="john@example.com">
+                  <div *ngIf="email!.invalid && (email!.dirty||email!.touched)" class="alert alert-warning mt-1">
+                    <div *ngIf="email!.errors?.['required']  || email!.errors?.['notOnlyWhiteSpace']">
+                      email is required. 
+                    </div>
+                    <div *ngIf="email!.errors?.['pattern'] ">
+                      email must be of the format: <i>john@example.com</i>
+                    </div> 
+                  </div>
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input formControlName="address" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <div *ngIf="address!.invalid && (address!.dirty||address!.touched)" class="alert alert-warning mt-1">
+                    <div *ngIf="address!.errors?.['required']">
+                      Address is required. 
+                    </div>
+                    <div *ngIf="address!.errors?.['minlength']">
+                      Adderss must be atleast 2 characters long
+                    </div> 
+                  </div>
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input formControlName="city" type="text" id="city" name="city" placeholder="Mumbai">
+                  <div *ngIf="city!.invalid && (city!.dirty||city!.touched)" class="alert alert-warning mt-1">
+                    <div *ngIf="city!.errors?.['required']  || city!.errors?.['notOnlyWhiteSpace']">
+                      city is required. 
+                    </div>
+                    <div *ngIf="city!.errors?.['minlength'] ">
+                      city must be atleast 2 characters long
+                    </div> 
+                  </div>
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input formControlName="state" type="text" id="state" name="state" placeholder="Maharashtra">
+                      <div *ngIf="state!.invalid && (state!.dirty||state!.touched)" class="alert alert-warning mt-1">
+                        <div *ngIf="state!.errors?.['required']  || state!.errors?.['notOnlyWhiteSpace']">
+                          state is required. 
+                        </div>
+                        <div *ngIf="state!.errors?.['minlength'] ">
+                          state must be atleast 2 characters long
+                        </div> 
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <label for="pincode">Pincode</label>
+                      <input formControlName="pincode" type="text" id="zip" name="pincode" placeholder="123456">
+                      <div *ngIf="pincode!.invalid && (pincode!.dirty||pincode!.touched)" class="alert alert-warning mt-1">
+                        <div *ngIf="pincode!.errors?.['required']  || pincode!.errors?.['notOnlyWhiteSpace']">
+                          pincode is required. 
+                        </div>
+                        <div *ngIf="pincode!.errors?.['minlength'] || pincode!.errors?.['maxlength']">
+                          pincode must be 6 characters  
+                        </div> 
+                      </div>
+                    </div>
+                  </div> 
+                </div>  
+      
+                <div class="col-50" formGroupName="paymentDetails">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa-brands fa-cc-visa" style="color: navy;"></i>
+                    <i class="fa-brands fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa-brands fa-cc-discover" style="color:orange;"></i>
+                  </div> 
+                  <label for="nameOnCard">Name on Card</label>
+                  <input formControlName="nameOnCard" type="text" id="cname" name="nameOnCard" placeholder="John More Doe">
+                  <div *ngIf="nameOnCard!.invalid && (nameOnCard!.dirty||nameOnCard!.touched)" class="alert alert-warning mt-1">
+                    <div *ngIf="nameOnCard!.errors?.['required'] || nameOnCard!.errors?.['notOnlyWhiteSpace']">
+                      Name on card is required. 
+                    </div>
+                    <div *ngIf="nameOnCard!.errors?.['minlength']">
+                      Name on card must be atleast 2 characters long 
+                    </div> 
+                  </div>
+                  <label for="cardNumber">Card number</label>
+                  <input formControlName="cardNumber" type="text" id="ccnum" name="cardNumber" placeholder="1111-2222-3333-4444">
+                  <div *ngIf="cardNumber!.invalid && (cardNumber!.dirty||cardNumber!.touched)" class="alert alert-warning mt-1">
+                    <div *ngIf="cardNumber!.errors?.['required']  || cardNumber!.errors?.['notOnlyWhiteSpace']">
+                      cardNumber is required. 
+                    </div>
+                    <div *ngIf="cardNumber!.errors?.['pattern']">
+                      cardNumber must be 16 digits 
+                    </div> 
+                  </div>
+                  <label for="expMonth">Exp Month</label>
+                  <select formControlName="expMonth" type="text" id="expmonth" name="expMonth" placeholder="September">
+                    <option *ngFor="let month of cardMonths">
+                      {{month}}
+                    </option>
+                  </select>
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expYear">Exp Year</label>
+                      <select formControlName="expYear" (change)="handleMonthsAndYears()" type="text" id="expyear" name="expYear" placeholder="2018">
+                        <option *ngFor="let year of cardYears">
+                          {{year}}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input formControlName="cvv" type="text" id="cvv" name="cvv" placeholder="352">
+                      <div *ngIf="cvv!.invalid && (cvv!.dirty||cvv!.touched)" class="alert alert-warning mt-1">
+                        <div *ngIf="cvv!.errors?.['required']  || cvv!.errors?.['notOnlyWhiteSpace']">
+                          cvv is required. 
+                        </div>
+                        <div *ngIf="cvv!.errors?.['pattern']">
+                          cvv must be 3 digits 
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <input type="submit" value="Make Payment" class="btn">
+            </form>
+          </div>
+        </div>
+        <!--<div class="col-25">
+          <div class="container">
+            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+          </div>
+        </div>-->
+      </div>
+      
+</div>

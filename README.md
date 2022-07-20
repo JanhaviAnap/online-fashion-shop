@@ -38,3 +38,19 @@ show tables;
 1. open spring boot in online-fashion-shop folder, i.e. where we have cloned our project
 2. click import projects
 3. import the online-fashion-shop-backend when asked for browse
+4. start the spring boot app sever by running the OnlineFashionShoppingApplication.java as Spring Boot app
+
+## Open Angular App ##
+Enter into the directory where the angular application is stored
+```
+cd online-fashion-shop-frontend 
+```
+Install necessary packages by running the following code
+```
+npm install -g @angular/localize bootstrap @fortawesome/fontawesome-free @ng-bootstrap/ng-bootstrap
+```
+Run the Angular app by running the following command in terminal
+```
+ng serve 
+```
+The application will run on on [http://localhost:4200](http://localhost:4200)

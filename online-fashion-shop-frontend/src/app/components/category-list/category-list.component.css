@@ -1,0 +1,10 @@
+.card{
+    margin:20px;
+
+}
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    background:#fff;
+    margin-left:50px;
+}

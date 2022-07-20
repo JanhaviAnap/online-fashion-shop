@@ -1,0 +1,115 @@
+<br><br><br>
+<!-- <img src="assets\images\ProductImages\backpack\1556.jpg"> -->
+<div class="container" id="cartMainContainer" >
+    <h1>Cart</h1>
+    <!-- <h3>Total Items: 3</h3> -->
+    <div *ngIf="cartItems.length>0">
+
+    
+    <div class="row" id="cartContainer">
+        <div id="boxContainer" >
+            <div *ngFor="let tempCartItem of cartItems">
+                <div class="row" id="box">
+                    <div class="col-md-1" style="margin-top: 20px;">
+                        <div id="button">
+                            <button (click)="remove(tempCartItem)" class="remove" style="margin-left: 24px; font-size:20px;">
+                                    <i class="fa fa-remove" aria-hidden="true" ></i> 
+                            </button>
+                        </div> 
+                    </div>
+                    <div class="col-md-2"  >
+                        <img src="{{tempCartItem.productImageUrl}}" style="margin-left: 36px;"/>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>{{tempCartItem.productName}}</h3>
+                        <h4>Unit Price: Rs. {{tempCartItem.productUnitPrice}}</h4> 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div>
+                                <button (click)="incrementQuantity(tempCartItem)" class="plus fa fa-plus"></button>
+                                <input #quantityInput (keyup.enter)="updateQuantity(tempCartItem,quantityInput.value)" value="{{tempCartItem.productQuantity}}"/>
+                                <button (click)="decrementQuantity(tempCartItem)" class="minus fa fa-minus"></button>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <h4>Total: Rs. {{tempCartItem.productUnitPrice*tempCartItem.productQuantity}}</h4>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- <div class="row" id="box"> 
+                <div class="col-md-1" style="margin-top: 20px;">
+                    <div id="button">
+                        <button class="remove" style="margin-left: 24px;">
+                            <a href="" style="font-size:20px; ">
+                                <i class="fa fa-remove" aria-hidden="true" ></i> 
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-2"  >
+                    <img src="assets\images\ProductImages\backpack\1556.jpg" style="margin-left: 36px;"/>
+                </div>
+                <div class="col-md-6">
+                    <h3>Awesome Product</h3>
+                    <h4>Unit Price: Rs. 1600</h4>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div>
+                            <button class="minus fa fa-minus"></button>
+                            <input type="text" value="1"/>
+                            <button class="minus fa fa-plus"></button>
+                        </div> 
+                    </div>
+                    <div class="row" style="margin-top: 10px;">
+                        <h4>Total: Rs. 1600</h4>
+                    </div> 
+                </div>
+            </div> -->
+            
+            <!-- <div class="row" id="box">
+                <div class="col-md-1">
+                    <img src="assets\images\ProductImages\backpack\1556.jpg">
+                </div>
+                <div class="col-md-7">
+                    <h3>Awesome Product</h3>
+                    <h4>Unit Price: Rs. 1600</h4>
+                </div>
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <button class="minus fa fa-minus"></button>
+                    <input type="text" value="1"/>
+                    <button class="minus fa fa-plus"></button>
+                </div>
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <div id="button">
+                        <button class="remove">
+                            <a href="" style="font-size:20px;"><i class="fa fa-remove" aria-hidden="true"></i> Remove</a>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        
+        <div id="totalContainer">
+            <h1>Total </h1>
+            <br>
+            <h3>Item: {{totalQuantity}}</h3>
+            <h3>Amount: Rs. {{totalPrice}}</h3>
+            <br>
+            <div id="button">
+                <button>
+                    <a routerLink="/cart/checkout" class="button" style="font-size:20px;">Checkout</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div *ngIf="cartItems.length==0" class="alert alert-warning col-md-12" role=""alert>
+        Your Shopping Cart is empty!<br>
+        <a routerLink="/shop/products">Continue Shopping</a>
+    </div>
+</div>

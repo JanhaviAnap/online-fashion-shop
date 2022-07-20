@@ -1,0 +1,39 @@
+<div class="container-fluid" id="body">
+	<div class="box-form">
+		<div class="left">
+			<div class="overlay">
+				<h1>Fashion Shop.</h1>
+				<p>One stop solution for all types of wardrobes ;)</p>
+			</div>
+		</div>
+		<form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" class="right">
+			<h5>Login</h5>  
+			<br><br><br><br>
+			<p>Don't have an account? <a routerLink="/user/signUp">Creat Your Account</a><br>It takes less than a minute</p>
+			<div class="inputs">
+				<input formControlName="emailId" type="text" placeholder="email id" >
+				<div *ngIf="emailId!.invalid && (emailId!.dirty || emailId!.touched)" class="alert alert-warning mt-1">
+					<div *ngIf="emailId!.errors?.['required'] || emailId!.errors?.['notOnlyWhiteSpace']" >
+						email required  
+					</div>
+					<div *ngIf="emailId!.errors?.['pattern'] " >
+						email must be of the format: <i>john@example.com</i>  
+					</div>
+				</div>
+
+				<input formControlName="password" type="password" placeholder="password">
+				<div *ngIf="password!.invalid && (password!.dirty || password!.touched)" class="alert alert-warning mt-1">
+					<div *ngIf="password!.errors?.['required'] || password!.errors?.['notOnlyWhiteSpace']" >
+						password required  
+					</div>
+					<div *ngIf="password!.errors?.['minlength'] " >
+						password must be at least 6 characters
+					</div>
+				</div>
+
+			</div>
+			<br><br><br>
+			<input type="submit" class="button text-center" value="Login">
+		</form>
+	</div>
+</div>

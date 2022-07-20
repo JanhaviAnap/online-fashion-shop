@@ -1,0 +1,52 @@
+<div class="body">
+    <div class="row">
+        <div class="col col-md-10">
+            <h1>User Name : {{user.userName}}</h1>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Order History</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Shipping Address</th>
+                            <th>Order Placed</th>
+                            <th>Order Summary</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tempOrder of orderList">
+                                <td class="align-middle">{{tempOrder.name}}</td>
+                                <td class="align-middle">{{tempOrder.email}}</td>
+                                <td class="align-middle">
+                                    {{tempOrder.address}}
+                                    <br>
+                                    {{tempOrder.city}} - {{tempOrder.pincode}}
+                                    <br>
+                                    {{tempOrder.state}}
+                                </td>
+                                <td class="align-middle" text-center>
+                                    Date : {{tempOrder.timestamp | date:'MMM d, y'}}
+                                    <br>
+                                    Time : {{tempOrder.timestamp | date: 'h:mm:ss a'}}
+                                </td>
+                                <td>
+                                    Quantity : {{tempOrder.totalQuantity}}
+                                    <br>
+                                    Price: {{tempOrder.totalPrice}}
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-2">
+            <button type="submit" class="button text-center" (click)="logOut()">Log Out</button>
+        </div>
+    </div>
+   
+</div>

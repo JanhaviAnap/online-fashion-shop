@@ -1,0 +1,39 @@
+<div class="smart-grid-layout">
+    <div class="row">
+        <div class="col"> 
+            <!-- HEADER --> 
+            <section>
+                <!-- MAIN CONTAINER -->
+                <div id="container">
+                    <!-- SHOP NAME -->
+                    <div id="shopName"><a routerLink="/shop"> <b>FASION</b>SHOP </a></div>
+                        <!-- COLLCETIONS ON WEBSITE -->
+                       <div id="collection">
+                            <!-- <div id="clothing"><a href="clothing.html"> CLOTHING </a></div> -->
+                            <!-- <div id="accessories"><a href="accessories.html"> ACCESSORIES </a></div> -->
+                        </div>
+                        <!-- SEARCH SECTION -->
+                        <div id="search">
+                            <input #searchInput 
+                            name="searchInput"
+                            type="text" id="input" 
+                            placeholder="Search for Clothing and Accessories"
+                            (keyup.enter)="doSearch(searchInput.value)"/>
+                            <button (click)="doSearch(searchInput.value)"
+                                    class="fa fa-search search btn">
+                            </button>
+                        </div>
+                        <!-- USER SECTION (CART AND USER ICON) -->
+                        <div id="user"> 
+                            <a routerLink="/cart/details"> 
+                                <i class="fas fa-shopping-cart addedToCart"></i>
+                                <span *ngIf="totalQuantity>0" class="badge" id="badge">{{totalQuantity}}</span>
+                            </a>
+                            <a routerLink="/user/detail"> <i class="fas fa-user-circle userIcon"></i> </a>
+                        </div> 
+                </div> 
+            </section>
+        </div>
+    </div>
+    
+</div>  
