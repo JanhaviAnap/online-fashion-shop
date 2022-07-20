@@ -66,28 +66,22 @@ export class SignupComponent implements OnInit {
     if(this.signUpFormGroup.invalid){
       this.signUpFormGroup.markAllAsTouched();
     }else{
-      console.log(this.signUpFormGroup.value);
-      console.log("signup pressed")
       this.user.emailId = this.signUpFormGroup.get('emailId')!.value;
       this.order.userEmail = this.signUpFormGroup.get('emailId')!.value;
       this.user.userName = this.signUpFormGroup.get('userName')!.value;
       this.user.password = this.signUpFormGroup.get('password')!.value;
       localStorage.setItem('userEmail',this.user.emailId)
-      // this.appComponent.setAuthValid(this.user.emailId);
       this.userAlreadyExists();
     }
     
   }
   userAlreadyExists(){
-    // console.log(this.user);
     let tempUser = new User();
     tempUser.id=0;
     this.userService.getUser(this.user.emailId).subscribe(
       data=>{
         tempUser = data
         if(tempUser!==null){
-          console.log("i exist already");
-          console.log("dee from signup")
           alert("account with this email already exists!")
           this.router.navigate(['/user/signUp'])
         }
@@ -98,13 +92,10 @@ export class SignupComponent implements OnInit {
         
       }
     )
-    // return false;
   }
   registerUser(){
     this.userService.registerUser(this.user).subscribe(
       data =>{
-        // alert("Successfully User Registered")
-        console.log("from signup comp")
         alert("Account created successfully")
         this.router.navigate(['/user/login'])
       }, 
@@ -112,7 +103,6 @@ export class SignupComponent implements OnInit {
     );
   }
   generateNewOrder(){
-    console.log(this.order);
     this.userService.generateNewOrder(this.order).subscribe(
       data=>{
         this.order = data;

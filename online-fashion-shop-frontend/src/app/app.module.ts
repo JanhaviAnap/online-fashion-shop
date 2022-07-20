@@ -23,12 +23,6 @@ import { UserService } from './services/user.service';
 import { OrderService } from './services/order.service';
 
 const routes: Routes = [
-  // {path: 'cartDetails', component: CartComponent},
-  // {path: 'products/:id', component :ProductDetailComponent},
-  // {path: 'productByKeyword/:keyword', component :ProductListComponent},
-  // {path: 'productByCategory/:catid/:name', component :ProductListComponent},
-  // {path: 'productByCategory/:catid', component :ProductListComponent},
-  // {path: 'products', component :ProductListComponent},
   {path: 'cart',
     children:[
       {path: 'details', component: CartComponent},
@@ -52,10 +46,6 @@ const routes: Routes = [
       {path: 'detail', component: UserDetailComponent}
     ]
   },
-  // {path: '', component: ProductListComponent, outlet:"shop"},
-  // {path: '', redirectTo :'/products',pathMatch:'full'},
-  // {path: '**', redirectTo :'/products',pathMatch:'full'}
-  // {path: '', redirectTo :'/user/login',pathMatch:'full'},
   {path: '', redirectTo :'/shop/products',pathMatch:'full'},
   {path: '**', redirectTo :'/shop/products',pathMatch:'full'}
 ];

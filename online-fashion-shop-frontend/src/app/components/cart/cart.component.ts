@@ -29,12 +29,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
-      console.log("from cart component")
       this.router.navigate(['/user/login'])
     }
-    
-    // window.location.reload()
-    // this.cartService.initData()
     this.getOrderByEmail()
     this.listCartItems()
     this.listCartTotals() 
@@ -51,13 +47,10 @@ export class CartComponent implements OnInit {
         this.computeCartTotals()
       }
     )
-    // this.computeCartTotals()
   }
 
 
   listCartTotals() {
-    // compute cart total price and quantity
-    // this.computeCartTotals()
     // subscribe to the cart totalPrice
     
     this.cartService.totalPrice.subscribe(
@@ -70,7 +63,7 @@ export class CartComponent implements OnInit {
   }
 
   addCartItem(theCartItem: CartItem){
-    console.log("Adding ",theCartItem)
+    // console.log("Adding ",theCartItem)
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = new CartItem();
     if(this.cartItems.length>0){
