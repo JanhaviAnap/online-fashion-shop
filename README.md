@@ -47,7 +47,7 @@ cd online-fashion-shop-frontend
 ```
 Install necessary packages by running the following code
 ```
-npm install -g @angular/localize bootstrap @fortawesome/fontawesome-free @ng-bootstrap/ng-bootstrap
+npm install
 ```
 Run the Angular app by running the following command in terminal
 ```
