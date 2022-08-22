@@ -1,3 +1,5 @@
+<!-- <br><br><br><br> -->
+
 <div id="containerD">
     <div id="imageSection">
         <img class="img" id="imageSection" src="{{prod.imageUrl}}" alt="Card image cap" >
@@ -12,6 +14,12 @@
         </div>
         <div id="button">
             <p style="margin-bottom: 0px;"><b>In Stock: </b>{{prod.unitsInStock}}</p>
+            <!-- <div class="quantity"> 
+                <h3>Quantity</h3>
+                <button class="minus fa fa-minus"></button>
+                <input type="text" value="1"/>
+                <button class="minus fa fa-plus"></button>
+            </div> -->
             <button (click)="addToCart()" 
             style="margin-top:15pX; margin-bottom: 15px;"
             >Add to cart</button>

@@ -10,6 +10,9 @@ export class FormService {
 
   getCardMonths(startMonth: number): Observable<any>{
     let data: number[] = [];
+    // build an array for "Month" dropdown list
+    // start at current month and loop until 12
+
     for (let theMonth=startMonth; theMonth<=12; theMonth++){
       data.push(theMonth);
     }
@@ -19,6 +22,8 @@ export class FormService {
   
   getCardYears(): Observable<any>{
     let data: number[] = [];
+    // build an array for "year" dropdown list
+    // start at current year and loop for next 10 years
     const startYear: number = new Date().getFullYear();
     const endYear: number = startYear + 10;
     

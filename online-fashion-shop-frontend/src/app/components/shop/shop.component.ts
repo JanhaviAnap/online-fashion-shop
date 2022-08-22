@@ -17,9 +17,16 @@ export class ShopComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    // if(this.appComponent.isLoggedIn(this.appComponent.getEmailId())===false){
+    //   this.router.navigate(['/user/login'])
+    // }
     if(localStorage.getItem('auth')!=="yes"){
+      console.log("from shop comp")
       this.router.navigate(['/user/login']) 
     }
+    // this.cartService.getOrderByEmail();
+    // this.cartService.getCartItems();
+    // this.cartService.getComputeCartTotals();
   }
 
 }

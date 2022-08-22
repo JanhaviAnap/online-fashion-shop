@@ -14,6 +14,11 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
+  // category : ProductCategory = {
+  //   id:0,
+  //   category:"",
+  //   type:""
+  // }
   emailId :string= String(localStorage.getItem('userEmail'));
   cartId: number = Number(localStorage.getItem('cartId'));
   order: Order = new Order();
@@ -32,18 +37,25 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
+      console.log("from prod detail comp")
       this.router.navigate(['/user/login'])
     }
       this.route.paramMap.subscribe(()=>{
         this.listCartItems();
         this.handleProductDetails();
       })
+    
+    // this.route.paramMap.subscribe(()=>{
+    //   this.listCartItems();
+    //   this.handleProductDetails();
+    // })
   }
   handleProductDetails() {
     const theProductId: number = Number(this.route.snapshot.paramMap.get('id'));
     this.productService.getProduct(theProductId).subscribe(
       data => {
         this.prod = data;
+        console.log(`Searched product `+JSON.stringify(data));
       }
     );
     this.productCategoryService.getProductCategoryByPid(theProductId).subscribe(
@@ -53,6 +65,7 @@ export class ProductDetailComponent implements OnInit {
     );
   }
   addToCart(){
+    // let theProduct = this.prod
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = new CartItem();
     if(this.cartItems.length>0){

@@ -32,6 +32,7 @@ export class CheckoutComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
+      console.log("from checkout component")
       this.router.navigate(['/user/login'])
     }
     
@@ -102,14 +103,17 @@ export class CheckoutComponent implements OnInit {
     // populate card months
     const startMonth: number = new Date().getMonth()+1;
     // const startMonth: number = 1;
+    console.log("startMonth: "+startMonth);
     this.formService.getCardMonths(startMonth).subscribe(
       data=>{
+        console.log("retrieved cardMonths: "+JSON.stringify(data));
         this.cardMonths = data;
       }
     );
     // populate card years
     this.formService.getCardYears().subscribe(
       data=>{
+        console.log("retrieved cardYears: "+JSON.stringify(data));
         this.cardYears = data;
       }
     );
@@ -143,13 +147,17 @@ export class CheckoutComponent implements OnInit {
     }
     this.formService.getCardMonths(startMonth).subscribe(
       data=>{
+        console.log("retrieved cardMonths: "+JSON.stringify(data));
         this.cardMonths = data;
       }
     );
   }
 
   onSubmit(){
-    console.log("Order Placed");
+    // if(localStorage.getItem('auth')!=="yes"){
+    //   this.router.navigate(['/user/login'])
+    // }
+    console.log("Handling the submit button");
     if(this.checkoutFormGroup.invalid){
       this.checkoutFormGroup.markAllAsTouched();
     }
@@ -163,7 +171,13 @@ export class CheckoutComponent implements OnInit {
     this.order.city = String(shippingAddress!.value.city)
     this.order.state = String(shippingAddress!.value.state)
     this.order.pincode = Number(shippingAddress!.value.pincode)
-        this.cartService.checkout(this.order);
+    
+    console.log("da da da da da cart id :",this.order);
+    this.cartService.checkout(this.order);
+    // console.log("da da lalala cart id :",this.order);
+    // this.cartService.getOrderByEmail();
+    // this.cartService.getCartItems();
+    // this.cartService.getComputeCartTotals();
     window.location.reload();
     this.router.navigate(['/shop/products']).then(()=>{
       alert("Payment Successful!!")

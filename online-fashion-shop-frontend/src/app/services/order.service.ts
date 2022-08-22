@@ -11,6 +11,7 @@ export class OrderService {
 
   private baseUrl = 'http://localhost:8080/api/order'
   private email = String(localStorage.getItem('userEmail'));
+  // private cartId = String(localStorage.getItem('cartId'));
   getPreviousOrders(): Observable<any>{
     return this.httpClient.get(`${this.baseUrl}/getPrevOrders/${this.email}`);
   }

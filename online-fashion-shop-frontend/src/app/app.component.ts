@@ -17,8 +17,17 @@ export class AppComponent implements OnInit{
               private userService: UserService,
               private cartService: CartService  ){}
   ngOnInit() {
+    // localStorage.clear()
+    // localStorage.setItem('userEmail',"cust6@gmail.com");
+    // localStorage.setItem('auth',"no");
+    // console.log('heyyyyy'+this.activeRoute);
     localStorage.removeItem("cartId");
     this.cartService.getOrderByEmail();
+    // this.cartService.getCartItems();
+    // this.cartService.getComputeCartTotals();
+    // localStorage.removeItem("cartId");
+    // setTimeout(() => {this.ngOnInit() }, 1000 * 1)
+
   }
   setAuthValid(emailId: string){
     this.auth = true;

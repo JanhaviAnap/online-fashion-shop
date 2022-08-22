@@ -31,7 +31,9 @@ export class ProductListComponent implements OnInit {
               private cartService: CartService,
               private route: ActivatedRoute,
               private router: Router
-              ) { }  
+              ) { }
+  // constructor(private productService: ProductService) { }
+  
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
       console.log("from product list component")
@@ -40,6 +42,7 @@ export class ProductListComponent implements OnInit {
       this.route.paramMap.subscribe(()=>{
         this.listCartItems();
         this.listProducts();
+        // this.listCartTotals();
       });
     
     
@@ -62,6 +65,7 @@ export class ProductListComponent implements OnInit {
     this.productService.searchProducts(theKeyword).subscribe(
       data => {
         console.log(`Searched by keyword = ${theKeyword}`);
+        console.log(`Searched data`+JSON.stringify(data));
         this.products = data;
       }
     )
@@ -81,15 +85,14 @@ export class ProductListComponent implements OnInit {
       this.currentCategoryName = "all";
       this.productService.getProductList().subscribe(
         data => {
+          console.log('All Products');
           this.products = data;
         }
       )
     }
     this.productService.getProductByCategoryList(this.currentCategoryId).subscribe(
       data=>{
-        if(this.currentCategoryId!==0){
-          console.log(`Products By Category = ${this.currentCategoryId}`);
-        }
+        console.log(`Product By Category= ${this.currentCategoryId}`);
         this.products=data;
       }
     )
@@ -97,6 +100,9 @@ export class ProductListComponent implements OnInit {
 
   }
   addToCart(theProduct: Product){
+    // if(localStorage.getItem('auth')!=="yes"){
+    //   this.router.navigate(['/user/login'])
+    // }
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = new CartItem();
     if(this.cartItems.length>0){
@@ -142,6 +148,8 @@ export class ProductListComponent implements OnInit {
         this.order = data;
         this.cartService.totalPrice.next(this.order.totalPrice);
         this.cartService.totalQuantity.next(this.order.totalQuantity);
+        // console.log("order hmm computed==>",this.order)
+        // this.cartService.logCartData(this.cartItems,this.totalPrice,this.totalQuantity)
       }
     )
   }

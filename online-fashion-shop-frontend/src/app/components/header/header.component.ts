@@ -23,17 +23,27 @@ export class HeaderComponent implements OnInit {
               private userService: UserService
               ) { }
 
+  doSearch(value: String){
+    console.log(`search value=${value}`);
+    // console.log(`${value}`)
+    this.router.navigateByUrl(`/shop/productByKeyword/${value}`);
+  }
+
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
+      console.log("from header component")
       this.router.navigate(['/user/login'])
     }
       this.getOrderByEmail();
       this.getComputeCartTotals();
       this.listCartTotals();
-  }
-
-  doSearch(value: String){
-    this.router.navigateByUrl(`/shop/productByKeyword/${value}`);
+    
+    // this.cartService.getCartItems();
+    // this.cartService.computeCartTotals();
+    // this.cartService.getComputeCartTotals();
+    
+    // console.log("oioioioiioioioioioioi ",this.totalPrice," ",this.totalQuantity)
+    
   }
 
   getOrderByEmail(){
@@ -46,6 +56,7 @@ export class HeaderComponent implements OnInit {
         this.totalQuantity = this.order.totalQuantity
         this.theTotalQuantity.next(this.order.totalQuantity);
         this.theTotalPrice.next(this.order.totalPrice);
+        console.log("oioioioiioioioioioioi ",this.totalPrice," ",this.totalQuantity)
       }
     )
   }
@@ -65,6 +76,8 @@ export class HeaderComponent implements OnInit {
         this.order = data;
         this.totalPrice = this.order.totalPrice;
         this.totalQuantity = this.order.totalQuantity;
+        // console.log("order hmm computed==>",this.order) 
+        // this.cartService.logCartData(this.cartItems,this.totalPrice,this.totalQuantity)
       }
     )
   }

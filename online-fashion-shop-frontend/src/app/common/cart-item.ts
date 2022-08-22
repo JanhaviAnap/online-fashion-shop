@@ -10,4 +10,14 @@ export class CartItem {
     productUnitPrice: number=0;
 
     productQuantity: number=0;
+
+    // constructor(product: Product){
+    //     this.productId = product.id;
+    //     this.name = product.name;
+    //     this.imageUrl = product.imageUrl;
+    //     this.unitPrice = product.unitPrice;
+
+    //     this.quantity = 1; 
+    // }
+    // substituteProduct
 }
