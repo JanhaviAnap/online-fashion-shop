@@ -1,7 +1,5 @@
 package com.springboot.ecommerce.dao;
 
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 

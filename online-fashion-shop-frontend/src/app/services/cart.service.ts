@@ -12,18 +12,13 @@ import { UserService } from './user.service';
 export class CartService {
 
 
-  // private cartComponent!: CartComponent
   cartItems:  CartItem[] = [];
   order: Order = new Order();
   // Subject used to publish events
   totalPrice: Subject<number> = new Subject<number>();
   totalQuantity: Subject<number> = new Subject<number>();
   emailId :string= String(localStorage.getItem('userEmail'));
-  cartId: number = Number(localStorage.getItem('cartId'));
-  // theCartItem : CartItem = new CartItem(new Product());
-  // cartItems: CartItem[] = this.getCartItem(this.email,this.cartId)
-  // serviceCartItems: BehaviorSubject<CartItem[]> = new BehaviorSubject<CartItem[]>(this.cartItems);
-  
+  cartId: number = Number(localStorage.getItem('cartId'));  
 
   baseUrl = 'http://localhost:8080/api'
 
@@ -64,7 +59,6 @@ export class CartService {
     return this.httpClient.post(`${searchUrl}`,cartItem)
   }
   incrementQuantity(cartItem: CartItem):Observable<any>{
-    // const searchUrl = `http://localhost:8080/api/cart/add`
     return this.httpClient.put(`${this.baseUrl}/cart/incrementQuantity`,cartItem)
   }
   decrementQuantity(cartItem: CartItem):Observable<any>{
@@ -81,7 +75,6 @@ export class CartService {
     this.getCartItemsByCartId(this.cartId).subscribe(
       data=>{
         this.cartItems=data;
-        // console.log("yepebdibdoib")
       }
     )
     this.getCartTotals().subscribe(
@@ -89,8 +82,6 @@ export class CartService {
         this.order = data;
         this.totalPrice.next(this.order.totalPrice);
         this.totalQuantity.next(this.order.totalQuantity);
-        // console.log("order hmm computed==>",this.order)
-        // this.logCartData(this.cartItems,this.order.totalPrice,this.order.totalQuantity)
       }
     )
   }
@@ -98,14 +89,9 @@ export class CartService {
   checkout(order:Order){
     this.userService.checkout(order).subscribe(
       data=>{
-        console.log("prev order: ",order);
+        console.log("order placed: ",order);
         this.order = data; 
-        console.log("new order: ",this.order);
-        // localStorage.setItem('cartId',String(this.order.id))
-        console.log("da cart id :",this.order.id);
-        // localStorage.removeItem('cartId');
         localStorage.setItem('cartId',String(this.order.id))
-        // console.log("updated dadadadad ",this.cartId)
         this.getOrderByEmail().subscribe(
           data=>{
             this.order=data;
@@ -116,13 +102,8 @@ export class CartService {
             this.order = data;
             this.totalPrice.next(this.order.totalPrice);
             this.totalQuantity.next(this.order.totalQuantity);
-            // console.log("order hmm computed==>",this.order)
-            // this.cartService.logCartData(this.cartItems,this.totalPrice,this.totalQuantity)
           }
         )
-        // location.reload();
-        // this.totalPrice.next(0);
-        // this.totalQuantity.next(0);
       }
     )
   }

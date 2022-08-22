@@ -16,17 +16,14 @@ export class UserService {
 
   baseUrl = 'http://localhost:8080/api'
   order: Order = new Order();
-  // dbUser: any;
 
   constructor(private httpClient: HttpClient) { }
 
   registerUser(user: User): Observable<any> {
-    // throw new Error('Method not implemented.');
-    console.log(user); //customer/add 
+    // console.log(user); //customer/add 
     return this.httpClient.post(`${this.baseUrl}/customer/add`,user);
   }
   getUser(emailId: string):Observable<any>{
-    // console.log(`${this.baseUrl}/customer/byEmail/${emailId}`)
     return this.httpClient.get(`${this.baseUrl}/customer/byEmail/${emailId}`);
   }
   getCartId(emailId: string): Observable<any>{
@@ -56,7 +53,6 @@ export class UserService {
     return this.httpClient.post(`${searchUrl}`,cartItem)
   }
   incrementQuantity(cartItem: CartItem):Observable<any>{
-    // const searchUrl = `http://localhost:8080/api/cart/add`
     return this.httpClient.put(`${this.baseUrl}/cart/incrementQuantity`,cartItem)
   }
   decrementQuantity(cartItem: CartItem):Observable<any>{
@@ -69,7 +65,6 @@ export class UserService {
     return this.httpClient.delete(`${this.baseUrl}/cart/delete/${id}`);
   } 
   checkout(order: Order): Observable<any>{
-    console.log("yayayayyayay",order)
     return this.httpClient.put(`${this.baseUrl}/order/checkout`,order);
   }
 

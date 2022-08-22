@@ -40,7 +40,6 @@ public class Order {
 	private long pincode;
 	@Column(name="last_modified")
 	private Timestamp timestamp;
-//	DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 	
 	public Order(String userEmail, long totalQuantity, long totalPrice, String paymetStatus, String name, String email, String address,
 			String city, String state, long pincode, Timestamp timestamp) {

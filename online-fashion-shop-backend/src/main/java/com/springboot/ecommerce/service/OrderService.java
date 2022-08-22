@@ -1,17 +1,12 @@
 package com.springboot.ecommerce.service;
 
 import java.util.Date;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springboot.ecommerce.dao.CartItemRepository;
 import com.springboot.ecommerce.dao.OrderRepository;
 import com.springboot.ecommerce.entity.CartItem;
 import com.springboot.ecommerce.entity.Order;
@@ -21,10 +16,7 @@ public class OrderService {
 	@Autowired
 	private OrderRepository orderRepository;
 	
-	private CartItemRepository cartItemRepository;
-	
 	public Order createOrder(String email) {
-//		setPrevOrderPaid(email);
 		Order order = new Order();
 		order.setUserEmail(email);
 		order.setPaymentStatus("unpaid");
@@ -42,20 +34,13 @@ public class OrderService {
 	}
 	
 	public void setPrevOrderPaid(String email) {
-//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/uuuu HH:mm:ss");
-		SimpleDateFormat sdf3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = new Date();
-//		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-//		LocalDateTime now = LocalDateTime.now();
-//		System.out.println(sdf3.format(timestamp));
 		orderRepository.setPrevOrderPaid(email,date);
 	}
 	public Order saveAddress(Order order) {
 		return orderRepository.save(order);
 	}
-	// CURRENT_TIMESTAMP
 	public Order checkout(Order order) {
-//		setPrevOrderPaid(order.getUserEmail());
 		setPrevOrderPaid(saveAddress(order).getUserEmail());
 		System.out.println("CHECKOUT :=> "+order.toString());
 		return createOrder(order.getUserEmail());
@@ -80,16 +65,13 @@ public class OrderService {
 		cartItems = orderRepository.findAllByCartId(order.getUserEmail(),order.getId());
 		long totalPriceValue = 0;
 		long totalQuantityValue = 0;
-		System.out.println("cartItems");
+		System.out.println("CartItems");
 		for(CartItem ci: cartItems) {
-//			totalPriceValue += cartItems.get(i).getProductUnitPrice()*cartItems.get(i).getProductQuantity();
-//			totalQuantityValue += cartItems.get(i).getProductQuantity();
 			totalPriceValue = totalPriceValue + ci.getProductUnitPrice()*ci.getProductQuantity();
 			totalQuantityValue = totalQuantityValue + ci.getProductQuantity();
-			System.out.println(ci.getProductUnitPrice()*ci.getProductQuantity()+" "+ci.getProductQuantity());
-			System.out.println(ci.getProductName()+" bruhhhh "+ci.getProductUnitPrice()+" "+ci.getProductQuantity());
+			System.out.println(ci.getProductName()+"  "+ci.getProductUnitPrice()+" "+ci.getProductQuantity()+" "+ci.getProductUnitPrice()*ci.getProductQuantity());
 		}
-		System.out.println("bruhhhh "+totalPriceValue+" "+totalQuantityValue);
+		System.out.println("TotalPrice: "+totalPriceValue+" TotalValue:"+totalQuantityValue);
 		orderRepository.updateTotals(order.getId(),totalPriceValue,totalQuantityValue);
 		order.setTotalQuantity(totalQuantityValue);
 		order.setTotalPrice(totalPriceValue);

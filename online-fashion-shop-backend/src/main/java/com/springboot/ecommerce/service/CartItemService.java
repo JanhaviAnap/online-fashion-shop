@@ -46,7 +46,6 @@ public class CartItemService {
 	
 	public CartItem removeCartItem(long id) {
 		CartItem newCI = getCartItemById(id);
-//		CartItem newCI = getCartItemByProductId(ci.getUserEmail(),ci.getCartId(),ci.getProductId());
 		cartItemRepository.deleteById(id);
 		System.out.println("deleting item: "+newCI.toString());
 		return newCI;

@@ -45,7 +45,6 @@ public class OrderController {
 	
 	@PutMapping("order/checkout")
 	public Order checkout(@RequestBody Order order) {
-//		orderService.setPrevOrderPaid(order.getUserEmail());
 		return orderService.checkout(order);
 	}
 	

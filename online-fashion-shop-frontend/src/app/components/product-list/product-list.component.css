@@ -1,0 +1,453 @@
+/*** ----------------------------Header--------------------- ***/
+body
+{
+    margin: 0;
+}
+#badge
+{
+    position: absolute;
+    background-color: rgb(255, 30, 30);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    top: 10px;
+    right:158px;
+}
+#container
+{
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.5fr 1.5fr 5fr 1fr;
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    position: fixed;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149); 
+}
+#shopName 
+{
+    font-size: 40px; 
+    font-family: 'Lato', sans-serif;
+}
+#shopName a
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+#shopName > b
+{
+    font-weight: 900;
+    font: black;
+}
+
+#collection
+{
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#collection a
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+.search
+{
+    padding: 14px;
+    /* color: gray; */
+    color: rgb(29, 29, 29);
+    min-width: 25px;
+    text-align: center;
+    position: absolute;
+}
+
+.addedToCart
+{
+    font-size: 1.5em;
+    margin-right: 25px;
+}
+#user
+{
+    display: flex;
+    /* float: right; */
+    align-items: center;
+}
+
+.userIcon
+{
+    font-size: 45px;
+}
+#input 
+{
+    width: 35em;
+    height: 3em;
+    padding: 2px 50px;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    border-radius: 5px;
+}
+#input::placeholder
+{
+    font-weight: bold;
+}
+#input:focus
+{
+    outline: none;
+}
+#user a
+{
+    color: rgb(29, 29, 29)
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1300px)
+{
+    #collection
+    {
+        font-size: 13px;
+    }
+    #input 
+    {
+        width: 25em;
+    }
+}
+@media(max-width: 1212px)
+{
+    #collection
+    {
+        font-size: 13px;
+    }
+    #input 
+    {
+        width: 20em;
+    }
+    .addedToCart
+    {
+        font-size: 1.5em;
+        margin: 10px 20px;
+    }
+}
+
+@media(max-width: 1090px)
+{
+    #container
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr 0.5fr;
+    }
+    #search
+    {
+        display: none;
+    }
+}
+@media(max-width: 750px)
+{
+    #shopName
+    {
+        font-size: 28px;
+    }
+    #collection
+    {
+        font-size: 12px;
+    }
+    .userIcon
+    {
+        font-size: 35px;
+    }
+    .addedToCart
+    {
+        font-size: 1.2em;
+        margin: 10px 20px;
+    }
+}
+
+@media(max-width: 650px)
+{
+    #shopName
+    {
+        font-size: 24px;
+    }
+    #collection
+    {
+        font-size: 10px;
+    }
+    .userIcon
+    {
+        font-size: 30px;
+    }
+}
+@media(max-width: 550px)
+{
+    #container 
+    {
+        padding: 20px 25px;
+    }
+}
+
+/* badge media */
+
+@media(max-width: 1480px)
+{
+    #badge
+    {
+        right:150px;
+    }
+}
+@media(max-width: 1426px)
+{
+    #badge
+    {
+        right:142px;
+    }
+}
+@media(max-width: 1360px)
+{
+    #badge
+    {
+        right:136px;
+    }
+}
+@media(max-width: 1320px)
+{
+    #badge
+    {
+        right:129px;
+    }
+}
+@media(max-width: 1259px)
+{
+    #badge
+    {
+        right:119px;
+    }
+}
+@media(max-width: 1212px)
+{
+    #badge
+    {
+        right: 96px;
+    }
+}
+@media(max-width: 1155px)
+{
+    #badge
+    {
+        right: 87px;
+    }
+}
+@media(max-width: 1090px)
+{
+    #badge
+    {
+        right: 119px;
+    }
+}
+@media(max-width: 1030px)
+{
+    #badge
+    {
+        right: 109px;
+    }
+}
+@media(max-width: 970px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 910px)
+{
+    #badge
+    {
+        right: 94px;
+    }
+}
+@media(max-width: 850px)
+{
+    #badge
+    {
+        right: 87px;
+    }
+}
+@media(max-width: 750px)
+{
+    #badge
+    {
+        right: 87px;
+        padding: 3px 6px;
+        font-size: 12px;
+        top: 12px;
+    }
+}
+@media(max-width: 650px)
+{
+    #badge
+    {
+        right: 78px;
+    }
+}
+@media(max-width: 550px)
+{
+    #badge
+    {
+        right: 62px;
+        top: 18px;
+    }
+}
+/***--------------------------Content--------------------***/
+body
+{
+    margin: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn  { 
+    display: block;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(3, 122, 122);
+    color: white;
+}
+
+h1
+{
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+#product
+{
+    display: grid;
+    grid-gap: 70px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+#box 
+{
+    width: 100%;
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+}
+#box:hover
+{
+    box-shadow: 1px 6px 3px 0 rgb(185, 185, 185);
+}
+#product img
+{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#details
+{
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+#box a 
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+.card{
+    padding:0px;
+}
+h3
+{
+    font-size: 16px;
+}
+h4
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(3, 94, 94);
+
+}
+h2
+{
+    color: rgb(3, 94, 94);
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1070px)
+{
+    h1
+    {
+        font-size: 25px;
+    }
+    #product
+    {
+        width: 95%;
+        grid-gap: 10px;
+    }
+}
+@media(max-width: 850px)
+{
+    h1 
+    {
+        width: 80%;
+    }
+    #product
+    {
+        display: grid;
+        grid-gap: 70px 20px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+    }    
+}
+@media(max-width: 650px)
+{
+    h1
+    {
+        font-size: 20px;
+    }
+    h1 
+    {
+        width: 90%;
+    }
+    #product
+    {
+        width: 90%;
+    }
+}
+@media(max-width: 600px)
+{
+    h1 
+    {
+        width: 70%;
+    }
+    #product
+    {
+        width: 70%;
+    }
+}
+@media(max-width: 505px)
+{
+    h1 
+    {
+        width: 80%;
+    }
+    #product
+    {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -29,12 +29,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
-      console.log("from cart component")
       this.router.navigate(['/user/login'])
     }
-    
-    // window.location.reload()
-    // this.cartService.initData()
     this.getOrderByEmail()
     this.listCartItems()
     this.listCartTotals() 
@@ -51,13 +47,10 @@ export class CartComponent implements OnInit {
         this.computeCartTotals()
       }
     )
-    // this.computeCartTotals()
   }
 
 
   listCartTotals() {
-    // compute cart total price and quantity
-    // this.computeCartTotals()
     // subscribe to the cart totalPrice
     
     this.cartService.totalPrice.subscribe(
@@ -70,7 +63,6 @@ export class CartComponent implements OnInit {
   }
 
   addCartItem(theCartItem: CartItem){
-    console.log("Adding ",theCartItem)
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = new CartItem();
     if(this.cartItems.length>0){
@@ -88,7 +80,6 @@ export class CartComponent implements OnInit {
       this.cartService.addCartItem(existingCartItem).subscribe(
         data=>{
           existingCartItem = data;
-          console.log("added ", existingCartItem);
           this.listCartItems()
         }
       )
@@ -99,7 +90,6 @@ export class CartComponent implements OnInit {
     this.cartService.incrementQuantity(theCartItem).subscribe(
       data =>{
         theCartItem = data;
-        console.log("incremented ", theCartItem);
         this.listCartItems()
       }
     );
@@ -111,7 +101,6 @@ export class CartComponent implements OnInit {
       this.cartService.updateQuantity(theCartItem).subscribe(
         data =>{
           theCartItem = data;
-          console.log("updated ", theCartItem);
           this.listCartItems()
         }
       )
@@ -125,7 +114,6 @@ export class CartComponent implements OnInit {
       this.cartService.decrementQuantity(theCartItem).subscribe(
         data =>{
           theCartItem = data;
-          console.log("decremented ", theCartItem);
           this.listCartItems()
         }
       ); 
@@ -135,7 +123,6 @@ export class CartComponent implements OnInit {
     this.cartService.removeCartItem(theCartItem.id).subscribe(
       data=>{
         let tempCartItem = data
-        console.log("deleted succesfully ",tempCartItem)
         this.listCartItems()
       }
     );
@@ -157,7 +144,7 @@ export class CartComponent implements OnInit {
         this.order = data;
         this.cartService.totalPrice.next(this.order.totalPrice);
         this.cartService.totalQuantity.next(this.order.totalQuantity);
-        console.log("order computed==>",this.order)
+        // console.log("order computed==>",this.order)
         this.cartService.logCartData(this.cartItems,this.totalPrice,this.totalQuantity)
       }
     )

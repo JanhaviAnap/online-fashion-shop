@@ -1,82 +1,4 @@
-<!-- <p>category-list works!</p> -->
 <div class="card flex-container">
-    <!-- <div class="card-group-item">
-		<header class="card-header">
-			<h6 class="title">Range input </h6>
-		</header>
-		<div class="filter-content">
-			<div class="card-body">
-			<div class="form-row">
-			<div class="form-group col-md-6">
-			  <label>Min</label>
-			  <input type="number" class="form-control" id="inputEmail4" placeholder="Rs. 0">
-			</div>
-			<div class="form-group col-md-6 text-right">
-			  <label>Max</label>
-			  <input type="number" class="form-control" placeholder="Rs. 1,0000">
-			</div>
-			</div>
-			</div> 
-		</div>
-    </div> -->
-	<!-- <div class="card-group-item">
-		<header class="card-header">
-			<h6 class="title">Type </h6>
-		</header>
-		<div class="filter-content">
-			<div class="card-body">
-			<form>
-				<label class="form-check">
-				  <input class="form-check-input" type="raido" value="">
-				  <span class="form-check-label">
-				    Malw
-				  </span>
-				</label> 
-				<label class="form-check">
-				  <input class="form-check-input" type="radio" value="">
-				  <span class="form-check-label">
-				    Femalw
-				  </span>
-				</label>  
-				<label class="form-check">
-				  <input class="form-check-input" type="radio" value="">
-				  <span class="form-check-label">
-				    Accessoried
-				  </span>
-				</label>
-			</form>
-
-			</div>
-		</div>
-	</div>  -->
-	
-	<!-- <div class="card-group-item">
-		<header class="card-header">
-			<h6 class="title">Categories </h6>
-		</header>
-		<div class="filter-content"> 
-			<div class="card-body">
-			<label class="form-check">
-			  <input class="form-check-input" type="checkbox" name="exampleRadio" value="">
-			  <a class="form-check-label" routerLink="/category/1" routerLinkActive="active-link">
-			    First hand items
-			  </a>
-			</label>
-			<label class="form-check">
-			  <input class="form-check-input" type="checkbox" name="exampleRadio" value="">
-			  <a class="form-check-label" routerLink="/category/2" routerLinkActive="active-link">
-			    Brand new items  
-			  </a>
-			</label>
-			<label class="form-check">
-			  <input class="form-check-input" type="checkbox" name="exampleRadio" value="">
-			  <a class="form-check-label" routerLink="/category/3" routerLinkActive="active-link">
-			    Some other option
-			  </a>
-			</label>
-			</div> 
-		</div>
-	</div>  -->
 	<div class="card-group-item">
 		<header class="card-header">
 			<h6 class="title">CATEGORIES </h6>
@@ -84,35 +6,16 @@
 		<div class="filter-content"> 
 			<div class="list-group list-group-flush">
 				<div class="category list-group-item" >
-					<!-- <input class="form-check-input" type="checkbox"> -->
 					<a class="" routerLink="/shop/products" routerLinkActive="active-link">
 					all
 					</a>
 		  		</div>
 				<div class="category list-group-item" *ngFor="let pc of productCategories">
-			  		<!-- <input class="form-check-input" type="checkbox" name="exampleRadio" value={{pc.id}}> -->
 			  		<a class="" routerLink="/shop/productByCategory/{{pc.id}}/{{pc.category}}" routerLinkActive="active-link">
 			    		{{pc.category}}
 			  		</a>
 				</div>
-				<!-- <label class="form-check">
-					<input class="form-check-input" type="checkbox" value="1">
-					<a class="form-check-label" routerLink="/productByCategory/1" routerLinkActive="active-link">
-					  BackPacks
-					</a>
-			    </label>
-			    <label class="form-check" >
-					<input class="form-check-input" type="checkbox" value="2">
-					<a class="form-check-label" routerLink="/productByCategory/2" routerLinkActive="active-link">
-				 	Bottles
-					</a>
-		  		</label> 
-				  <label class="form-check" >
-					<input class="form-check-input" type="checkbox" value="3">
-					<a class="form-check-label" routerLink="/productByCategory/3" routerLinkActive="active-link">
-				 	Cap
-					</a>
-		  		</label>  -->
+
 			</div> 
 		</div>
 	</div> 

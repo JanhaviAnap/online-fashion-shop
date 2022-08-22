@@ -9,12 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.ecommerce.entity.Order;
 import com.springboot.ecommerce.entity.User;
-import com.springboot.ecommerce.service.OrderService;
 import com.springboot.ecommerce.service.UserService;
 
 @RestController
@@ -24,12 +21,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
-	private OrderService orderService;
-	
+		
 	@PostMapping("customer/add")
 	public User addCustomer(@RequestBody User user) {
-//		Order order = orderService.createOrder(user.getEmailId());
 		return userService.addUser(user);
 	}
 	

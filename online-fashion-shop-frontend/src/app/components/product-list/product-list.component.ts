@@ -9,10 +9,8 @@ import { CartComponent } from '../cart/cart.component';
 
 @Component({ 
   selector: 'app-product-list',
-  templateUrl: './product-list.component-copy.html',
-  styleUrls: ['./product-list.component.css',
-              './css/header.css',
-              './css/content.css'
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css'
             ]
 }) 
 export class ProductListComponent implements OnInit {
@@ -31,18 +29,14 @@ export class ProductListComponent implements OnInit {
               private cartService: CartService,
               private route: ActivatedRoute,
               private router: Router
-              ) { }
-  // constructor(private productService: ProductService) { }
-  
+              ) { }  
   ngOnInit(): void {
     if(localStorage.getItem('auth')!=="yes"){
-      console.log("from product list component")
       this.router.navigate(['/user/login']) 
     }
       this.route.paramMap.subscribe(()=>{
         this.listCartItems();
         this.listProducts();
-        // this.listCartTotals();
       });
     
     
@@ -64,8 +58,8 @@ export class ProductListComponent implements OnInit {
     const theKeyword: string = String(this.route.snapshot.paramMap.get('keyword'));
     this.productService.searchProducts(theKeyword).subscribe(
       data => {
-        console.log(`Searched by keyword = ${theKeyword}`);
-        console.log(`Searched data`+JSON.stringify(data));
+        // console.log(`Searched by keyword = ${theKeyword}`);
+        // console.log(`Searched data`+JSON.stringify(data));
         this.products = data;
       }
     )
@@ -85,14 +79,12 @@ export class ProductListComponent implements OnInit {
       this.currentCategoryName = "all";
       this.productService.getProductList().subscribe(
         data => {
-          console.log('All Products');
           this.products = data;
         }
       )
     }
     this.productService.getProductByCategoryList(this.currentCategoryId).subscribe(
       data=>{
-        console.log(`Product By Category= ${this.currentCategoryId}`);
         this.products=data;
       }
     )
@@ -100,9 +92,6 @@ export class ProductListComponent implements OnInit {
 
   }
   addToCart(theProduct: Product){
-    // if(localStorage.getItem('auth')!=="yes"){
-    //   this.router.navigate(['/user/login'])
-    // }
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = new CartItem();
     if(this.cartItems.length>0){
@@ -118,7 +107,6 @@ export class ProductListComponent implements OnInit {
       this.cartService.incrementQuantity(existingCartItem).subscribe(
         data=>{
           existingCartItem = data;
-          console.log("incremented ", existingCartItem);
           this.listCartItems()
         }
       )
@@ -128,7 +116,6 @@ export class ProductListComponent implements OnInit {
       this.cartService.addCartItem(existingCartItem).subscribe(
         data=>{
           existingCartItem = data;
-          console.log("added ", existingCartItem);
           this.listCartItems()
         }
       )
@@ -148,8 +135,6 @@ export class ProductListComponent implements OnInit {
         this.order = data;
         this.cartService.totalPrice.next(this.order.totalPrice);
         this.cartService.totalQuantity.next(this.order.totalQuantity);
-        // console.log("order hmm computed==>",this.order)
-        // this.cartService.logCartData(this.cartItems,this.totalPrice,this.totalQuantity)
       }
     )
   }

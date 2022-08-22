@@ -28,12 +28,9 @@ export class UserDetailComponent implements OnInit {
   emailId :string= String(localStorage.getItem('userEmail'));
 
   ngOnInit(): void {
-    // location.reload()
     if(localStorage.getItem('auth')!=="yes"){
-      console.log("from user detail comp")
       this.router.navigate(['/user/login'])
     }
-      // cust7@gmail.com
     this.getUser();
     this.getPreviousOrders();
   }
@@ -66,20 +63,10 @@ export class UserDetailComponent implements OnInit {
   }
 
   logOut(){
-    // this.appComponent.logOut()
-    // localStorage.removeItem("auth")
-    // localStorage.removeItem("cartId")
     let tempMail = String(localStorage.getItem("userEmail"))
     localStorage.clear();
     this.cartService.totalQuantity.next(0);
     this.cartService.totalPrice.next(0);
-    // localStorage.setItem("userEmail",tempMail)
-    // if(localStorage.getItem('auth')!=="yes"){
-    //   // window.location.reload();
-    //   this.router.navigate(['/user/login'])
-    // }
-    console.log("from logout")
-    // location.reload();
     this.router.navigate(['/user/login']) 
   } 
 } 

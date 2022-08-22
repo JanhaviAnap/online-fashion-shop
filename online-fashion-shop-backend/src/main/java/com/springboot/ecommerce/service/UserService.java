@@ -1,12 +1,10 @@
 package com.springboot.ecommerce.service;
 
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springboot.ecommerce.dao.UserRepository;
-import com.springboot.ecommerce.entity.Order;
 import com.springboot.ecommerce.entity.User;
 
 @Service
@@ -79,7 +77,6 @@ public class UserService {
 	}
 	
 	public User deleteCustomer(String email) {
-		String type = "customer";
 		User u = new User();
 		u = getCustomerByEmailId(email);
 		userRepository.deleteById(u.getId());
@@ -87,7 +84,6 @@ public class UserService {
 	}
 	
 	public User deleteAdmin(String email) {
-		String type = "admin";
 		User u = new User();
 		u = getAdminByEmailId(email);
 		userRepository.deleteById(u.getId());
