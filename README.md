@@ -36,7 +36,7 @@ show tables;
 
 ## Openning Spring Boot Project ##
 1. open spring boot in online-fashion-shop folder, i.e. where we have cloned our project
-2. click import projects
+2. import projects > maven > existing maven projects
 3. import the online-fashion-shop-backend when asked for browse
 4. start the spring boot app sever by running the OnlineFashionShoppingApplication.java as Spring Boot app
 
