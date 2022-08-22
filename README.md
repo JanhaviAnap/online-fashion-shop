@@ -54,3 +54,7 @@ Run the Angular app by running the following command in terminal
 ng serve 
 ```
 The application will run on on [http://localhost:4200](http://localhost:4200)
+
+Refer the following link to view desired outputs:
+
+[output screenshots](https://drive.google.com/file/d/1rmGmFoLlaclNEOUbt4mlBP3flgvsBfSG/view?usp=sharing)
